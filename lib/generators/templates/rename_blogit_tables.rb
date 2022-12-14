@@ -1,4 +1,4 @@
-class RenameBlogitTables < ActiveRecord::Migration
+class RenameBlogitTables < ActiveRecord::Migration[6.1]
   def change
     if table_exists?('blog_posts')
       rename_table('blog_posts', 'blogit_posts') 
